@@ -60,7 +60,7 @@ public class EmployeeController {
 		
 		try {
 			Employee emp = this.employeeServiceInterface.getEmployeeById(empId);
-			return new ResponseEntity<Employee>(emp,HttpStatus.OK);
+			return new ResponseEntity<Employee>(emp, HttpStatus.OK);
 			
 		} catch (BusinessException exception) {
 			ControllerException ce = new ControllerException(exception.getErrorCode(), exception.getErrorMessage());
